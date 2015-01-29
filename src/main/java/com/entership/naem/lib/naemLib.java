@@ -27,14 +27,12 @@ public class naemLib {
 			 */
 			public static void register(Item item){
 				GameRegistry.registerItem(item, item.getUnlocalizedName().substring(5));
-				registerInventoryItem(item, Data.MODID);
 			}
 			/**
 			 * Registers a block with unlocalized name and their inventory item render
 			 */
 			public static void register(Block block){
 				GameRegistry.registerBlock(block, block.getUnlocalizedName().substring(5));
-				registerInventoryItem(block, Data.MODID);
 			}
 			/**
 			 * Registers a block including ItemBlock with unlocalized name
@@ -212,8 +210,9 @@ public class naemLib {
 		     * @param modelname the model file name (the json item-model)
 		     * @param meta the meta of the item
 		     */
-		    //@SideOnly(Side.CLIENT)
+		    @SideOnly(Side.CLIENT)
 		    public static void registerInventoryItem(Item item, String modid, String modelname, int meta){
+		    	System.out.println(item.getUnlocalizedName() + "  "+modid+"  "+modelname+"  "+meta);
 		    	Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, meta, new ModelResourceLocation(modid+":"+modelname, "inventory"));
 		    }
 		    

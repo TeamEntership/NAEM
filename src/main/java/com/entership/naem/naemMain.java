@@ -8,9 +8,19 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.Mod.Instance;
+import net.minecraftforge.fml.common.SidedProxy;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 import com.entership.naem.blocks.naemBlocks;
 import com.entership.naem.handler.naemCreativeTab;
+import com.entership.naem.network.CommonProxy;
+
 import com.entership.naem.network.CommonProxy;
 
 @Mod(	modid = Data.MODID,
@@ -34,16 +44,16 @@ public class naemMain {
     {
 		//PacketHandler
 		//reg Fluids
+		//init blocks
 		naemBlocks.init();
-		
 		//init items
-		//reg blocks
-		//reg items
     }
 	
 	@EventHandler
     public void init(FMLInitializationEvent event)
     {
+		//reg item render
+		naemBlocks.initItemModel();
 		//recipes
     }
 	

@@ -11,11 +11,15 @@ public class naemBlocks {
 
 	public static void init() {
 
-		naemContent.broken_rock = new BlockRuinRock(Material.rock).setUnlocalizedName(Data.MODID + ":broken_rock").setCreativeTab(naemMain.naemtabblocks);
+		naemContent.broken_rock = new BlockRuinRock(Material.rock).setUnlocalizedName("broken_rock").setCreativeTab(naemMain.naemtabblocks);
 
 		registerBlocks();
 		setFireInfo();
 		oreDictRegister();
+	}
+	
+	public static void initItemModel(){
+		naemLib.registerInventoryItem(naemContent.broken_rock, Data.MODID);
 	}
 
 	private static void registerBlocks() {
