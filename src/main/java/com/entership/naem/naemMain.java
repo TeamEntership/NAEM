@@ -25,13 +25,19 @@ public class naemMain {
 	@EventHandler
     public void preinit(FMLPreInitializationEvent event)
     {
-		
+		//PacketHandler
+		//reg Fluids
+		//init blocks
+		//init items
+		//reg blocks
+		//reg items
     }
 	
 	@EventHandler
     public void init(FMLInitializationEvent event)
     {
-		
+		//reg item render
+		//recipes
     }
 	
 	@EventHandler
