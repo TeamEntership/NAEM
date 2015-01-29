@@ -1,5 +1,6 @@
 package com.entership.naem;
 
+import com.entership.blocks.naemBlocks;
 import com.entership.naem.network.CommonProxy;
 
 import net.minecraftforge.fml.common.Mod;
@@ -28,6 +29,7 @@ public class naemMain {
 		//PacketHandler
 		//reg Fluids
 		//init blocks
+		naemBlocks.init();
 		//init items
 		//reg blocks
 		//reg items
