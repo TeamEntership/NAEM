@@ -1,4 +1,4 @@
-package com.entership.blocks;
+package com.entership.naem.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;

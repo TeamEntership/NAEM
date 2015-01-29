@@ -9,7 +9,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-import com.entership.blocks.naemBlocks;
+import com.entership.naem.blocks.naemBlocks;
 import com.entership.naem.network.CommonProxy;
 
 @Mod(	modid = Data.MODID,

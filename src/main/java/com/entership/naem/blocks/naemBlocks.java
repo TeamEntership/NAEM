@@ -1,4 +1,4 @@
-package com.entership.blocks;
+package com.entership.naem.blocks;
 
 import net.minecraft.block.material.Material;
 import net.minecraftforge.fml.common.registry.GameRegistry;
