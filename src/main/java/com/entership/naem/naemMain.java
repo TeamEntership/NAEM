@@ -10,16 +10,16 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(	modid = naemData.MODID,
-		version = naemData.VERSION,
-		name = naemData.NAME,
-		acceptedMinecraftVersions = naemData.MCVERSIONS)
+@Mod(	modid = Data.MODID,
+		version = Data.VERSION,
+		name = Data.NAME,
+		acceptedMinecraftVersions = Data.MCVERSIONS)
 public class naemMain {
 	
-	@SidedProxy(clientSide = naemData.clientproxy, serverSide = naemData.commonproxy)
+	@SidedProxy(clientSide = Data.clientproxy, serverSide = Data.commonproxy)
 	public static CommonProxy proxy;
 	
-	@Instance(naemData.MODID)
+	@Instance(Data.MODID)
 	public static naemMain instance;
 	
 	@EventHandler
