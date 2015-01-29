@@ -11,7 +11,6 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 import com.entership.naem.blocks.naemBlocks;
 import com.entership.naem.handler.naemCreativeTab;
-import com.entership.naem.handler.naemModelMesher;
 import com.entership.naem.network.CommonProxy;
 
 @Mod(	modid = Data.MODID,
@@ -45,7 +44,6 @@ public class naemMain {
 	@EventHandler
     public void init(FMLInitializationEvent event)
     {
-		naemModelMesher.init();
 		//recipes
     }
 	

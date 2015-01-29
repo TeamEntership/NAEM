@@ -212,7 +212,7 @@ public class naemLib {
 		     * @param modelname the model file name (the json item-model)
 		     * @param meta the meta of the item
 		     */
-		    @SideOnly(Side.CLIENT)
+		    //@SideOnly(Side.CLIENT)
 		    public static void registerInventoryItem(Item item, String modid, String modelname, int meta){
 		    	Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, meta, new ModelResourceLocation(modid+":"+modelname, "inventory"));
 		    }

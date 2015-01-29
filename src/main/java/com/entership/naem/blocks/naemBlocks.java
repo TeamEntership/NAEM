@@ -1,11 +1,11 @@
 package com.entership.naem.blocks;
 
 import net.minecraft.block.material.Material;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import com.entership.naem.Data;
 import com.entership.naem.naemMain;
 import com.entership.naem.handler.naemContent;
+import com.entership.naem.lib.naemLib;
 
 public class naemBlocks {
 
@@ -19,7 +19,7 @@ public class naemBlocks {
 	}
 
 	private static void registerBlocks() {
-		GameRegistry.registerBlock(naemContent.broken_rock, "broken_rock");
+		naemLib.register(naemContent.broken_rock);
 	}
 
 	private static void setFireInfo() {
