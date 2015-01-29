@@ -1,4 +1,4 @@
-package com.entership.naem;
+package com.entership.naem.handler;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -16,9 +16,9 @@ public class naemCreativeTab extends CreativeTabs {
 	public Item getTabIconItem() {
 
 		if (tab >= 1) {
-			return Item.getItemFromBlock(naemContent.ruin_rock); //Itemtab
+			return Item.getItemFromBlock(naemContent.broken_rock); //Itemtab
 		} else {
-			return Item.getItemFromBlock(naemContent.ruin_rock);
+			return Item.getItemFromBlock(naemContent.broken_rock);
 		}
 
 	}
