@@ -14,7 +14,8 @@ public class Data {
 	public static final String MCVERSIONS = "1.8";
 	
 	//proxies
-	public static final String clientproxy = "";
-	public static final String commonproxy = "";
+	public static final String MAIN_PACKAGE = "com.entership.naem";
+	public static final String CLIENTPROXY = MAIN_PACKAGE+".client.ClientProxy";
+	public static final String COMMONPROXY = MAIN_PACKAGE+".network.CommonProxy";
 
 }

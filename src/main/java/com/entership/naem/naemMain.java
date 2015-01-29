@@ -16,7 +16,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 		acceptedMinecraftVersions = Data.MCVERSIONS)
 public class naemMain {
 	
-	@SidedProxy(clientSide = Data.clientproxy, serverSide = Data.commonproxy)
+	@SidedProxy(clientSide = Data.CLIENTPROXY, serverSide = Data.COMMONPROXY)
 	public static CommonProxy proxy;
 	
 	@Instance(Data.MODID)
