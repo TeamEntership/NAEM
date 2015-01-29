@@ -3,6 +3,8 @@ package com.entership.naem.lib;
 import java.util.Arrays;
 import java.util.Random;
 
+import com.entership.naem.Data;
+
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelResourceLocation;
@@ -15,6 +17,8 @@ import net.minecraft.util.BlockPos;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class naemLib {
 	
@@ -23,12 +27,14 @@ public class naemLib {
 			 */
 			public static void register(Item item){
 				GameRegistry.registerItem(item, item.getUnlocalizedName().substring(5));
+				registerInventoryItem(item, Data.MODID);
 			}
 			/**
-			 * Registers a block with unlocalized name
+			 * Registers a block with unlocalized name and their inventory item render
 			 */
 			public static void register(Block block){
 				GameRegistry.registerBlock(block, block.getUnlocalizedName().substring(5));
+				registerInventoryItem(block, Data.MODID);
 			}
 			/**
 			 * Registers a block including ItemBlock with unlocalized name
@@ -206,6 +212,7 @@ public class naemLib {
 		     * @param modelname the model file name (the json item-model)
 		     * @param meta the meta of the item
 		     */
+		    @SideOnly(Side.CLIENT)
 		    public static void registerInventoryItem(Item item, String modid, String modelname, int meta){
 		    	Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, meta, new ModelResourceLocation(modid+":"+modelname, "inventory"));
 		    }
