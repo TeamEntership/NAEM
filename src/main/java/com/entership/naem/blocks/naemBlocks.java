@@ -14,7 +14,7 @@ public class naemBlocks{
 
 	public static void init() {
 
-		naemContent.dark_brick = new BlockDarkBricks(Material.rock).setUnlocalizedName("DarkBricks").setCreativeTab(naemMain.naemtabblocks);
+		naemContent.dark_brick = new BlockDarkBrick(Material.rock).setUnlocalizedName("DarkBricks").setCreativeTab(naemMain.naemtabblocks);
 
 		registerBlocks();
 		setFireInfo();
