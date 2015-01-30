@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "build=false": { "model": "naem:broken_rock" }
+        "build=true": { "model": "naem:broken_rock" }
+    }
+}
