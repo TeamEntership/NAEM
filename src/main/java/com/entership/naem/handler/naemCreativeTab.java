@@ -16,7 +16,7 @@ public class naemCreativeTab extends CreativeTabs {
 	public Item getTabIconItem() {
 
 		if (tab >= 1) {
-			return Item.getItemFromBlock(naemContent.dark_brick); //Itemtab
+			return naemContent.robot_part; //Itemtab
 		} else {
 			return Item.getItemFromBlock(naemContent.dark_brick);
 		}

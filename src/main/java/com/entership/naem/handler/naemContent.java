@@ -1,6 +1,7 @@
 package com.entership.naem.handler;
 
 import net.minecraft.block.Block;
+import net.minecraft.item.Item;
 
 public enum naemContent {
 	INSTANCE;
@@ -10,7 +11,7 @@ public enum naemContent {
 	
 	
 	//Items
-	
+	public static Item robot_part;
 	
 	//ToolMaterial
 
