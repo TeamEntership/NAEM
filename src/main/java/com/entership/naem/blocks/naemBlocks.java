@@ -14,7 +14,7 @@ public class naemBlocks{
 
 	public static void init() {
 
-		naemContent.broken_rock = new BlockRuinRock(Material.rock).setUnlocalizedName("broken_rock").setCreativeTab(naemMain.naemtabblocks);
+		naemContent.dark_brick = new BlockDarkBricks(Material.rock).setUnlocalizedName("DarkBricks").setCreativeTab(naemMain.naemtabblocks);
 
 		registerBlocks();
 		setFireInfo();
@@ -23,11 +23,12 @@ public class naemBlocks{
 
     public static void initItemModel()
     {
-		naemLib.registerInventoryItem(naemContent.broken_rock, Data.MODID);
+		naemLib.registerInventoryItem(naemContent.dark_brick, Data.MODID);
+		naemLib.registerInventoryItem(naemContent.dark_brick, Data.MODID, 1);
 	}
 
 	private static void registerBlocks() {
-		naemLib.register(naemContent.broken_rock);
+		naemLib.register(naemContent.dark_brick);
 	}
 
 	private static void setFireInfo() {

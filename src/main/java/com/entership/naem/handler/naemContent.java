@@ -6,7 +6,7 @@ public enum naemContent {
 	INSTANCE;
 	
 	//Blocks
-	public static Block broken_rock;
+	public static Block dark_brick;
 	
 	
 	//Items
