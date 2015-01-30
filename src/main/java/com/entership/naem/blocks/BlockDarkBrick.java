@@ -17,12 +17,13 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BlockDarkBrick extends Block {
 
-	private IProperty VARIANT = PropertyEnum.create("variant",BlockDarkBrick.DarkBrickType.class);
+	//private IProperty VARIANT = PropertyEnum.create("variant",BlockDarkBrick.DarkBrickType.class.getClass());
 
 
 	protected BlockDarkBrick(Material materialIn) {
 		super(materialIn);
-		this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, BlockDarkBrick.DarkBrickType.DEFAULT));
+		
+		//this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, BlockDarkBrick.DarkBrickType.DEFAULT));
 		// TODO Auto-generated constructor stub
 	}
 	
@@ -36,25 +37,26 @@ public class BlockDarkBrick extends Block {
 		}
 	}
 	
-	protected BlockState createBlockState()
-	{
-		return new BlockState(this, new IProperty[]{VARIANT});
-	}
-	
-	public IBlockState getStatefromMeta(int meta)
-	{
-		return this.getDefaultState().withProperty(VARIANT, BlockDarkBrick.DarkBrickType.byMetadata(meta));
-	}
-	
-	public int getMetafromState(IBlockState state)
-	{
-		return ((BlockDarkBrick.DarkBrickType) state.getValue(VARIANT)).getMetadata();
-	}
-	
-	public int damageDropped(IBlockState state)
-	{
-		return ((BlockDarkBrick.DarkBrickType) state.getValue(VARIANT)).getMetadata();
-	}
+//	protected BlockState createBlockState()
+//	{
+//		System.out.println(BlockDarkBrick.DarkBrickType.BUILD.getName());
+//		return new BlockState(this, VARIANT);
+//	}
+//	
+//	public IBlockState getStatefromMeta(int meta)
+//	{
+//		return this.getDefaultState().withProperty(VARIANT, BlockDarkBrick.DarkBrickType.byMetadata(meta));
+//	}
+//	
+//	public int getMetafromState(IBlockState state)
+//	{
+//		return ((BlockDarkBrick.DarkBrickType) state.getValue(VARIANT)).getMetadata();
+//	}
+//	
+//	public int damageDropped(IBlockState state)
+//	{
+//		return ((BlockDarkBrick.DarkBrickType) state.getValue(VARIANT)).getMetadata();
+//	}
 	
 	
 	public static enum DarkBrickType implements IStringSerializable
@@ -74,8 +76,11 @@ public class BlockDarkBrick extends Block {
         }
         
 		@Override
+		public String toString() {
+			return name;
+		}
+		
 		public String getName() {
-			// TODO Auto-generated method stub
 			return name;
 		}
 		
