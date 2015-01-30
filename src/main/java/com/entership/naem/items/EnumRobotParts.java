@@ -4,10 +4,10 @@ import net.minecraft.util.IStringSerializable;
 
 public enum EnumRobotParts implements IStringSerializable
 {
-    WHOLE(0, 3, "whole", "whole"),
-    REPAIRED(1, 2, "repaired", "repaired"),
-    HALFED(2, 1, "halfed", "halfed"),
-    BROKEN(3, 0, "broken", "broken");
+    WHOLE(3, 0, "whole", "whole"),
+    REPAIRED(2, 1, "repaired", "repaired"),
+    HALFED(1, 2, "halfed", "halfed"),
+    BROKEN(0, 3, "broken", "broken");
     private static final EnumRobotParts[] META_LOOKUP = new EnumRobotParts[values().length];
     private static final EnumRobotParts[] DYE_DMG_LOOKUP = new EnumRobotParts[values().length];
     private final int meta;
