@@ -8,6 +8,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.relauncher.Side;
 
 import com.entership.naem.blocks.naemBlocks;
 import com.entership.naem.handler.naemCreativeTab;
@@ -41,12 +42,15 @@ public class naemMain {
 		//init items
     }
 	
+	
 	@EventHandler
     public void init(FMLInitializationEvent event)
     {
-		//reg item render
-		naemBlocks.initItemModel();
-		naemItems.initItemModel();
+		if (event.getSide() == Side.CLIENT) {
+			naemBlocks.initItemModel();
+			naemItems.initItemModel();
+		}
+		
 		//recipes
     }
 	

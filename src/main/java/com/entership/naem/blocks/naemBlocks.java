@@ -1,13 +1,7 @@
 package com.entership.naem.blocks;
 
 import net.minecraft.block.material.Material;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.resources.model.ModelBakery;
-import net.minecraft.client.resources.model.ModelResourceLocation;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 
-import com.entership.naem.Data;
 import com.entership.naem.handler.naemContent;
 import com.entership.naem.items.ItemBlockMeta;
 import com.entership.naem.lib.naemLib;
@@ -26,26 +20,8 @@ public class naemBlocks {
 
 	public static void initItemModel() {
 
-		for (int i = 0; i < 2; i++) {
-
-			Item item = Item.getItemFromBlock(naemContent.dark_brick);
-			ItemStack it = new ItemStack(item, 1, i);
-			String name = it.getUnlocalizedName().substring(5);
-
-			ModelBakery.addVariantName(item, Data.MODID + ":" + name);
-			Minecraft.getMinecraft().getRenderItem().getItemModelMesher()
-					.register(it.getItem(), it.getItemDamage(), new ModelResourceLocation(Data.MODID + ":" + name, "inventory"));
-		}
-		for (int i = 0; i < 4; i++) {
-
-			Item item = Item.getItemFromBlock(naemContent.stone_tile);
-			ItemStack it = new ItemStack(item, 1, i);
-			String name = it.getUnlocalizedName().substring(5);
-
-			ModelBakery.addVariantName(item, Data.MODID + ":" + name);
-			Minecraft.getMinecraft().getRenderItem().getItemModelMesher()
-					.register(it.getItem(), it.getItemDamage(), new ModelResourceLocation(Data.MODID + ":" + name, "inventory"));
-		}
+		naemLib.registerVariant(naemContent.dark_brick, 1);
+		naemLib.registerVariant(naemContent.stone_tile, 3);
 
 	}
 
