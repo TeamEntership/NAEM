@@ -3,8 +3,6 @@ package com.entership.naem.lib;
 import java.util.Arrays;
 import java.util.Random;
 
-import com.entership.naem.Data;
-
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelResourceLocation;
@@ -29,7 +27,7 @@ public class naemLib {
 				GameRegistry.registerItem(item, item.getUnlocalizedName().substring(5));
 			}
 			/**
-			 * Registers a block with unlocalized name and their inventory item render
+			 * Registers a block with unlocalized name
 			 */
 			public static void register(Block block){
 				GameRegistry.registerBlock(block, block.getUnlocalizedName().substring(5));

@@ -8,6 +8,7 @@ public enum naemContent {
 	
 	//Blocks
 	public static Block dark_brick;
+	public static Block stone_tile;
 	
 	
 	//Items

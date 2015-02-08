@@ -1,7 +1,7 @@
 {
 "parent": "builtin/generated",
     "textures": {
-        "layer0": "naem:/items/robot_part_whole"
+        "layer0": "naem:/items/robot_part_repaired"
     },
     "display": {
         "thirdperson": {

@@ -1,5 +1,5 @@
 {
-    "parent": "naem:block/dark_brick_0",
+    "parent": "naem:block/dark_brick_1",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

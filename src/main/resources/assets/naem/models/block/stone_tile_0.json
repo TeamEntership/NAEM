@@ -1,0 +1,6 @@
+{
+    "parent": "naem:block/naem_block_all",
+    "textures": {
+        "all": "naem:blocks/stone_tile_0"
+    }
+}

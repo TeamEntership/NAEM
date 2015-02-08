@@ -1,5 +1,7 @@
+
 {
-    "variants": {
-        "normal": { "model": "naem:dark_brick" }        
-    }
+	"variants": {
+	    "metadata=0": { "model": "naem:dark_brick_0" },
+	    "metadata=1": { "model": "naem:dark_brick_1" }
+	}
 }
