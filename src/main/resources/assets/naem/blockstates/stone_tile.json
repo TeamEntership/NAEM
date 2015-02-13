@@ -4,6 +4,7 @@
 	    "metadata=0": { "model": "naem:stone_tile_0" },
 	    "metadata=1": { "model": "naem:stone_tile_1" },
 	    "metadata=2": { "model": "naem:stone_tile_2" },
-	    "metadata=3": { "model": "naem:stone_tile_3" }
+	    "metadata=3": { "model": "naem:stone_tile_3" },
+	    "metadata=4": { "model": "naem:stone_tile_4"}
 	}
 }

@@ -15,14 +15,16 @@ import net.minecraft.item.ItemStack;
 import com.entership.naem.naemMain;
 
 public class BlockStoneTile extends Block {
-
+	//the maximum meta
+	static int metadata = 4;
+	
 	protected BlockStoneTile(Material p_i45394_1_) {
 		super(p_i45394_1_);
 		setCreativeTab(naemMain.naemtabblocks);
 		this.setDefaultState(this.blockState.getBaseState().withProperty(META, 0));
 	}
 	
-	public static final PropertyInteger META = PropertyInteger.create("metadata", 0, 3);
+	public static final PropertyInteger META = PropertyInteger.create("metadata", 0, metadata);
 
 	public IBlockState getStateFromMeta(int meta) {
 		return this.getDefaultState().withProperty(META, meta);
@@ -39,7 +41,7 @@ public class BlockStoneTile extends Block {
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
 	public void getSubBlocks(Item it, CreativeTabs t, List l) {
-		for (int i = 0; i <= 3; i++) {
+		for (int i = 0; i <= metadata; i++) {
 			l.add(new ItemStack(it, 1, i));
 		}
 	}

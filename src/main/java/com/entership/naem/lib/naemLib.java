@@ -144,7 +144,7 @@ public class naemLib {
 	 * @param item
 	 *            the item that gets registered
 	 * @param meta
-	 *            the meta of the block
+	 *            the maximum meta of the block
 	 */
 	public static void registerVariant(Block block, int meta) {
 		registerVariant(Item.getItemFromBlock(block), meta);
@@ -156,7 +156,7 @@ public class naemLib {
 	 * @param item
 	 *            the item that gets registered
 	 * @param meta
-	 *            the meta of the item
+	 *            the maximum meta of the item
 	 */
 	public static void registerVariant(Item item, int meta) {
 		

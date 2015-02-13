@@ -21,7 +21,7 @@ public class naemBlocks {
 	public static void initItemModel() {
 
 		naemLib.registerVariant(naemContent.dark_brick, 1);
-		naemLib.registerVariant(naemContent.stone_tile, 3);
+		naemLib.registerVariant(naemContent.stone_tile, 4);
 
 	}
 	
