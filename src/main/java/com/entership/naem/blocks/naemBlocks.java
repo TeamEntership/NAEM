@@ -24,7 +24,7 @@ public class naemBlocks {
 		naemLib.registerVariant(naemContent.stone_tile, 3);
 
 	}
-
+	
 	private static void registerBlocks() {
 		naemLib.register(naemContent.dark_brick, ItemBlockMeta.class);
 		naemLib.register(naemContent.stone_tile, ItemBlockMeta.class);

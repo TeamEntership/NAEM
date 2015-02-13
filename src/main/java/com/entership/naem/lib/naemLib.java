@@ -171,45 +171,41 @@ public class naemLib {
 
 	}
 
+//--------------------------------------	
+	
 	/**
 	 * registers the inventory model using the given block meta = 0; modelname =
 	 * unlocalized name of block must be used in init
 	 * 
 	 * @param block
 	 *            the block using the model
-	 * @param modid
-	 *            the modid of the block
 	 */
-	public static void registerInventoryItem(Block block, String modid) {
-		registerInventoryItem(block, modid, block.getUnlocalizedName().substring(5), 0);
+	public static void registerInventoryItem(Block block) {
+		registerInventoryItem(block, block.getUnlocalizedName().substring(5), 0);
 	}
 
 	/**
 	 * registers the inventory model using the given item meta = 0; modelname =
 	 * unlocalized name of item must be used in init
 	 * 
-	 * @param item
-	 *            the item using the model
-	 * @param modid
-	 *            the modid of the item
+	 * @param item 
+	 * 			the item using the model
 	 */
-	public static void registerInventoryItem(Item item, String modid) {
-		registerInventoryItem(item, modid, item.getUnlocalizedName().substring(5), 0);
+	public static void registerInventoryItem(Item item) {
+		registerInventoryItem(item, item.getUnlocalizedName().substring(5), 0);
 	}
 
 	/**
 	 * registers the inventory model using the given block modelname =
 	 * unlocalized name of item must be used in init
 	 * 
-	 * @param block
-	 *            the block using the model
-	 * @param modid
-	 *            the modid of the block
+	 * @param block 
+	 * 			 the block using the model
 	 * @param modelname
 	 *            the model file name (the json item-model)
 	 */
-	public static void registerInventoryItem(Block block, String modid, int meta) {
-		registerInventoryItem(block, modid, block.getUnlocalizedName().substring(5), meta);
+	public static void registerInventoryItem(Block block, int meta) {
+		registerInventoryItem(block, block.getUnlocalizedName().substring(5), meta);
 	}
 
 	/**
@@ -218,13 +214,11 @@ public class naemLib {
 	 * 
 	 * @param item
 	 *            the item using the model
-	 * @param modid
-	 *            the modid of the item
 	 * @param modelname
 	 *            the model file name (the json item-model)
 	 */
-	public static void registerInventoryItem(Item item, String modid, int meta) {
-		registerInventoryItem(item, modid, item.getUnlocalizedName().substring(5), meta);
+	public static void registerInventoryItem(Item item, int meta) {
+		registerInventoryItem(item, item.getUnlocalizedName().substring(5), meta);
 	}
 
 	/**
@@ -233,13 +227,11 @@ public class naemLib {
 	 * 
 	 * @param block
 	 *            the block using the model
-	 * @param modid
-	 *            the modid of the block
 	 * @param modelname
 	 *            the model file name (the json item-model)
 	 */
-	public static void registerInventoryItem(Block block, String modid, String modelname) {
-		registerInventoryItem(block, modid, modelname, 0);
+	public static void registerInventoryItem(Block block, String modelname) {
+		registerInventoryItem(block, modelname, 0);
 	}
 
 	/**
@@ -248,13 +240,11 @@ public class naemLib {
 	 * 
 	 * @param item
 	 *            the block using the model
-	 * @param modid
-	 *            the modid of the item
 	 * @param modelname
 	 *            the model file name (the json item-model)
 	 */
-	public static void registerInventoryItem(Item item, String modid, String modelname) {
-		registerInventoryItem(item, modid, modelname, 0);
+	public static void registerInventoryItem(Item item, String modelname) {
+		registerInventoryItem(item, modelname, 0);
 	}
 
 	/**
@@ -262,15 +252,13 @@ public class naemLib {
 	 * 
 	 * @param block
 	 *            the block using the model
-	 * @param modid
-	 *            the modid of the block
 	 * @param modelname
 	 *            the model file name (the json item-model)
 	 * @param meta
 	 *            the meta of the block
 	 */
-	public static void registerInventoryItem(Block block, String modid, String modelname, int meta) {
-		registerInventoryItem(Item.getItemFromBlock(block), modid, modelname, meta);
+	public static void registerInventoryItem(Block block, String modelname, int meta) {
+		registerInventoryItem(Item.getItemFromBlock(block), modelname, meta);
 	}
 
 	/**
@@ -278,17 +266,15 @@ public class naemLib {
 	 * 
 	 * @param item
 	 *            the item using the model
-	 * @param modid
-	 *            the modid of the item
 	 * @param modelname
 	 *            the model file name (the json item-model)
 	 * @param meta
 	 *            the meta of the item
 	 */
 	@SideOnly(Side.CLIENT)
-	public static void registerInventoryItem(Item item, String modid, String modelname, int meta) {
-		System.out.println(item.getUnlocalizedName() + "  " + modid + "  " + modelname + "  " + meta);
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, meta, new ModelResourceLocation(modid + ":" + modelname, "inventory"));
+	public static void registerInventoryItem(Item item, String modelname, int meta) {
+		System.out.println(item.getUnlocalizedName() + "  " + Data.MODID + "  " + modelname + "  " + meta);
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, meta, new ModelResourceLocation(Data.MODID + ":" + modelname, "inventory"));
 	}
 
 	// ---------------------------
