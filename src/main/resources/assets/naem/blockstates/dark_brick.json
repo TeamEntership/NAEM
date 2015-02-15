@@ -1,7 +1,17 @@
 
 {
 	"variants": {
-	    "metadata=0": { "model": "naem:dark_brick_0" },
-	    "metadata=1": { "model": "naem:dark_brick_1" }
+	    "metadata=0": [
+	        { "model": "naem:dark_brick_0" },	       
+            { "model": "naem:dark_brick_0_mirrored" },
+            { "model": "naem:dark_brick_0", "y": 180 },
+            { "model": "naem:dark_brick_0_mirrored", "y": 180 }
+	    ],
+	    "metadata=1": [
+            { "model": "naem:dark_brick_1" },          
+            { "model": "naem:dark_brick_1_mirrored" },
+            { "model": "naem:dark_brick_1", "y": 180 },
+            { "model": "naem:dark_brick_1_mirrored", "y": 180 }
+        ],
 	}
 }

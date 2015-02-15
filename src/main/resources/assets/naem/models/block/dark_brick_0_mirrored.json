@@ -1,0 +1,6 @@
+{
+    "parent": "naem:block/naem_block_mirrored_all",
+    "textures": {
+        "all": "naem:blocks/dark_brick_0"
+    }
+}
